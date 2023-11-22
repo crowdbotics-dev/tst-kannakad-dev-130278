@@ -11,6 +11,24 @@ function api_docs_schema_retrieve(payload) {
 function api_v1_login_create(payload) {
   return tstkannakaddevAPI.post(`/api/v1/login/`, payload)
 }
+function api_v1_sedda_list(payload) {
+  return tstkannakaddevAPI.get(`/api/v1/sedda/`)
+}
+function api_v1_sedda_create(payload) {
+  return tstkannakaddevAPI.post(`/api/v1/sedda/`, payload)
+}
+function api_v1_sedda_retrieve(payload) {
+  return tstkannakaddevAPI.get(`/api/v1/sedda/${payload.id}/`)
+}
+function api_v1_sedda_update(payload) {
+  return tstkannakaddevAPI.put(`/api/v1/sedda/${payload.id}/`, payload)
+}
+function api_v1_sedda_partial_update(payload) {
+  return tstkannakaddevAPI.patch(`/api/v1/sedda/${payload.id}/`, payload)
+}
+function api_v1_sedda_destroy(payload) {
+  return tstkannakaddevAPI.delete(`/api/v1/sedda/${payload.id}/`)
+}
 function api_v1_signup_create(payload) {
   return tstkannakaddevAPI.post(`/api/v1/signup/`, payload)
 }
@@ -56,6 +74,12 @@ function rest_auth_user_partial_update(payload) {
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
+  api_v1_sedda_list,
+  api_v1_sedda_create,
+  api_v1_sedda_retrieve,
+  api_v1_sedda_update,
+  api_v1_sedda_partial_update,
+  api_v1_sedda_destroy,
   api_v1_signup_create,
   rest_auth_login_create,
   rest_auth_logout_create,
